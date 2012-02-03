@@ -3,7 +3,7 @@
 #include <avr/interrupt.h>
 
 #define CLOCK_TICKS_PER_MS F_CPU / 1000UL
-// Timer0 is prescaled by 64 and 8-bits
+// Timer0 is 8 bits and is prescaled by 64
 #define CLOCK_TICKS_PER_TIMER0_OVERFLOW 64UL * 256UL
 
 volatile static uint32_t timer0_ticks = 0;
