@@ -19,18 +19,18 @@ class Atmega32u4Hardware {
     }
 
     int read() {
-      return CDC_Device_ReceiveByte(&VirtualSerial1_CDC_Interface);
+      return CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
     }
 
     void write(uint8_t* data, int length) {
-      CDC_Device_SendData(&VirtualSerial1_CDC_Interface, (char *)data, (uint16_t)length);
+      CDC_Device_SendData(&VirtualSerial_CDC_Interface, (char *)data, (uint16_t)length);
     }
 
     unsigned long time() {
       return avr_time_now();
     }
 
-    static USB_ClassInfo_CDC_Device_t VirtualSerial1_CDC_Interface;
+    static USB_ClassInfo_CDC_Device_t VirtualSerial_CDC_Interface;
 };
 
 void EVENT_USB_Device_ConfigurationChanged(void);

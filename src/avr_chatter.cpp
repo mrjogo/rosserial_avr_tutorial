@@ -37,7 +37,7 @@ int main()
     }
     nh.spinOnce();
     // LUFA functions that need to be called frequently to keep USB alive
-    CDC_Device_USBTask(&Atmega32u4Hardware::VirtualSerial1_CDC_Interface);
+    CDC_Device_USBTask(&Atmega32u4Hardware::VirtualSerial_CDC_Interface);
     USB_USBTask();
   }
 
