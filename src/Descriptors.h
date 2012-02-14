@@ -6,6 +6,8 @@
            www.lufa-lib.org
 */
 
+/* >> Modified for use with ROS rosserial_client tutorial << */
+
 /*
   Copyright 2011  Dean Camera (dean [at] fourwalledcubicle [dot] com)
 
